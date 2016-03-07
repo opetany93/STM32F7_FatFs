@@ -418,6 +418,11 @@
               <FileType>1</FileType>
               <FilePath>.\source\init.c</FilePath>
             </File>
+            <File>
+              <FileName>i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\source\i2c.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

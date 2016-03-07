@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\FatFs.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\FatFs.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Sun Mar 06 14:08:20 2016
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Mon Mar 07 22:02:55 2016
 <BR><P>
 <H3>Maximum Stack Usage =       1040 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -455,9 +455,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SD_WriteBlocks_DMA
+<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FATFS_SD_SDIO_disk_ioctl
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SD_WriteBlocks_DMA
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SD_ReadBlocks_DMA
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FATFS_SD_SDIO_disk_ioctl
 </UL>
 
 <P><STRONG><a name="[77]"></a>__aeabi_dmul</STRONG> (Thumb, 228 bytes, Stack size 48 bytes, dmul.o(.text))
@@ -1020,9 +1020,9 @@ Global Symbols
 
 <P><STRONG><a name="[e0]"></a>clust2sect</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, ff.o(i.clust2sect))
 <BR><BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_mkdir
-<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_write
 <LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_sdi
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_next
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_write
 </UL>
 
 <P><STRONG><a name="[e5]"></a>disk_initialize</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, diskio.o(i.disk_initialize))
@@ -1046,8 +1046,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FATFS_SD_SDIO_disk_read
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_write
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;move_window
+<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;move_window
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_write
 </UL>
 
 <P><STRONG><a name="[e8]"></a>disk_status</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, diskio.o(i.disk_status))
@@ -1064,18 +1064,18 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FATFS_SD_SDIO_disk_write
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_write
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_sync
-<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sync_window
+<BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sync_window
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sync_fs
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_write
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_sync
 </UL>
 
 <P><STRONG><a name="[ea]"></a>f_close</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, ff.o(i.f_close))
 <BR><BR>[Stack]<UL><LI>Max Depth = 304<LI>Call Chain = f_close &rArr; f_sync &rArr; sync_fs &rArr; sync_window &rArr; disk_write &rArr; FATFS_SD_SDIO_disk_write &rArr; SD_WriteBlocks_DMA &rArr; HAL_SD_CheckWriteOperation &rArr; HAL_SD_GetStatus &rArr; SD_GetState &rArr; SD_SendStatus &rArr; SD_CmdResp1Error &rArr; SDMMC_GetResponse
 </UL>
-<BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_sync
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;validate
+<BR>[Calls]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;validate
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dec_lock
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_sync
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1083,9 +1083,9 @@ Global Symbols
 <P><STRONG><a name="[7e]"></a>f_getfree</STRONG> (Thumb, 258 bytes, Stack size 56 bytes, ff.o(i.f_getfree))
 <BR><BR>[Stack]<UL><LI>Max Depth = 424<LI>Call Chain = f_getfree &rArr; find_volume &rArr; check_fs &rArr; move_window &rArr; sync_window &rArr; disk_write &rArr; FATFS_SD_SDIO_disk_write &rArr; SD_WriteBlocks_DMA &rArr; HAL_SD_CheckWriteOperation &rArr; HAL_SD_GetStatus &rArr; SD_GetState &rArr; SD_SendStatus &rArr; SD_CmdResp1Error &rArr; SDMMC_GetResponse
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_fat
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;move_window
+<BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;move_window
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_volume
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_fat
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AK_FATFS_GetDriveSize
 </UL>
@@ -1138,8 +1138,8 @@ Global Symbols
 <P><STRONG><a name="[fc]"></a>f_printf</STRONG> (Thumb, 628 bytes, Stack size 160 bytes, ff.o(i.f_printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 576<LI>Call Chain = f_printf &rArr; putc_bfd &rArr;  putc_bfd (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_write
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc_bfd
+<BR>[Calls]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc_bfd
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_write
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1478,16 +1478,16 @@ Local Symbols
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_fat
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_mkdir
-<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_write
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_next
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_write
 </UL>
 
 <P><STRONG><a name="[d5]"></a>create_name</STRONG> (Thumb, 638 bytes, Stack size 56 bytes, ff.o(i.create_name))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = create_name &rArr; mem_set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ff_convert
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mem_set
+<BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mem_set
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chk_chr
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ff_convert
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;follow_path
 </UL>
@@ -1525,11 +1525,11 @@ Local Symbols
 <P><STRONG><a name="[db]"></a>dir_next</STRONG> (Thumb, 270 bytes, Stack size 24 bytes, ff.o(i.dir_next))
 <BR><BR>[Stack]<UL><LI>Max Depth = 352<LI>Call Chain = dir_next &rArr; create_chain &rArr; put_fat &rArr; move_window &rArr; sync_window &rArr; disk_write &rArr; FATFS_SD_SDIO_disk_write &rArr; SD_WriteBlocks_DMA &rArr; HAL_SD_CheckWriteOperation &rArr; HAL_SD_GetStatus &rArr; SD_GetState &rArr; SD_SendStatus &rArr; SD_CmdResp1Error &rArr; SDMMC_GetResponse
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_fat
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clust2sect
+<BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clust2sect
 <LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sync_window
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mem_set
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;create_chain
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_fat
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_register
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_find
@@ -1557,8 +1557,8 @@ Local Symbols
 <P><STRONG><a name="[da]"></a>dir_sdi</STRONG> (Thumb, 158 bytes, Stack size 24 bytes, ff.o(i.dir_sdi))
 <BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = dir_sdi &rArr; get_fat &rArr; move_window &rArr; sync_window &rArr; disk_write &rArr; FATFS_SD_SDIO_disk_write &rArr; SD_WriteBlocks_DMA &rArr; HAL_SD_CheckWriteOperation &rArr; HAL_SD_GetStatus &rArr; SD_GetState &rArr; SD_SendStatus &rArr; SD_CmdResp1Error &rArr; SDMMC_GetResponse
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_fat
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clust2sect
+<BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clust2sect
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_fat
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;follow_path
 <LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_register
@@ -1642,9 +1642,9 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = mem_cpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_mkdir
-<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_write
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gen_numname
 <LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_register
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_write
 </UL>
 
 <P><STRONG><a name="[d8]"></a>mem_set</STRONG> (Thumb, 20 bytes, Stack size 12 bytes, ff.o(i.mem_set))
@@ -1665,22 +1665,22 @@ Local Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_getfree
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_open
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;put_fat
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_fat
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_sync
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;find_volume
 <LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_register
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_find
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dir_alloc
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_fs
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;put_fat
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_fat
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_sync
 </UL>
 
 <P><STRONG><a name="[fd]"></a>putc_bfd</STRONG> (Thumb, 78 bytes, Stack size 24 bytes, ff.o(i.putc_bfd))
 <BR><BR>[Stack]<UL><LI>Max Depth = 416 + In Cycle
 <LI>Call Chain = putc_bfd &rArr;  putc_bfd (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_write
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc_bfd
+<BR>[Calls]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc_bfd
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_write
 </UL>
 <BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_printf
 <LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;putc_bfd
