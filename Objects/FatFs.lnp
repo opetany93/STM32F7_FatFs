@@ -1,6 +1,7 @@
 --cpu Cortex-M7.fp.sp --fpu=FPv4-SP
 ".\objects\main.o"
 ".\objects\init.o"
+".\objects\i2c.o"
 ".\objects\ak_stm32_fatfs.o"
 ".\objects\startup_stm32f746xx.o"
 ".\objects\stm32f7xx_it.o"
