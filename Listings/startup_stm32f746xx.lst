@@ -944,11 +944,20 @@ ARM Macro Assembler    Page 15
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M7.fp.sp --fpu=F
 Pv4-SP --apcs=interwork --depend=.\objects\startup_stm32f746xx.d -o.\objects\st
+<<<<<<< HEAD
 artup_stm32f746xx.o -ID:\STM32\Keil_projects\STM32F7\STM32F7_FatFs\RTE -IC:\Kei
 l_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.3.0 -IC:\Keil_v5\ARM\CMSIS\Include --predefi
 ne="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 514" --predefine="ST
 M32F746xx SETA 1" --list=.\listings\startup_stm32f746xx.lst lib\startup_stm32f7
 46xx.s
+=======
+artup_stm32f746xx.o -IC:\Users\£ysol\Desktop\Organizer\Studia\stm1\git_proj\STM
+32F7_FatFs\RTE -IC:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.2.0\Drivers\CMSIS\Dev
+ice\ST\STM32F7xx\Include -IC:\Keil_v5\ARM\CMSIS\Include -IC:\Keil_v5\ARM\PACK\K
+eil\STM32F7xx_DFP\2.2.0 --predefine="__EVAL SETA 1" --predefine="__MICROLIB SET
+A 1" --predefine="__UVISION_VERSION SETA 515" --predefine="STM32F746xx SETA 1" 
+--list=.\listings\startup_stm32f746xx.lst lib\startup_stm32f746xx.s
+>>>>>>> 7e74b842e6e19516f7f707fc44b93ee4a252bc41
 
 
 
@@ -2189,4 +2198,4 @@ Symbol: __main
       At line 206 in file lib\startup_stm32f746xx.s
 Comment: __main used once
 2 symbols
-460 symbols in table
+461 symbols in table

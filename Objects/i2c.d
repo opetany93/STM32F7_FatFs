@@ -1,6 +1,10 @@
 .\objects\i2c.o: source\i2c.c
 .\objects\i2c.o: source\i2c.h
+<<<<<<< HEAD
 .\objects\i2c.o: .\lib\stm32f7xx.h
+=======
+.\objects\i2c.o: .\lib\stm32F7xx.h
+>>>>>>> 7e74b842e6e19516f7f707fc44b93ee4a252bc41
 .\objects\i2c.o: .\lib\stm32f746xx.h
 .\objects\i2c.o: .\lib\CMSIS\core_cm7.h
 .\objects\i2c.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
@@ -74,4 +78,8 @@
 .\objects\i2c.o: .\STM32F7xx_HAL_Driver\Inc\stm32f7xx_ll_usb.h
 .\objects\i2c.o: .\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_pcd_ex.h
 .\objects\i2c.o: .\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_hcd.h
+<<<<<<< HEAD
 .\objects\i2c.o: .\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal.h
+=======
+.\objects\i2c.o: .\STM32F7xx_HAL_Driver\Inc\stm32F7xx_hal.h
+>>>>>>> 7e74b842e6e19516f7f707fc44b93ee4a252bc41
